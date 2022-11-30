@@ -16,16 +16,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'es2_Angular'`, () => {
+  it(`should have as title 'es3_Angular'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('es2_Angular');
+    expect(app.title).toEqual('es3_Angular');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('es2_Angular app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('es3_Angular app is running!');
   });
 });

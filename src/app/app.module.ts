@@ -8,6 +8,7 @@ import { NoActiveComponent } from './components/no-active/no-active.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './components/home/home.component';
+import { PostCardComponent } from './components/post-card/post-card.component';
 
 const routes: Route[] = [
   {
@@ -30,7 +31,8 @@ const routes: Route[] = [
     ActiveComponent,
     NoActiveComponent,
     NavbarComponent,
-    HomeComponent
+    HomeComponent,
+    PostCardComponent
   ],
   imports: [
     BrowserModule,

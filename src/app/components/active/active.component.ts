@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Post } from 'src/app/models/post.interface';
-import * as postsSrv from '../../service/posts.service';
+import { getPost, updatePost } from 'src/app/service/posts.service';
 
 @Component({
   selector: 'app-active',
@@ -12,10 +12,16 @@ export class ActiveComponent implements OnInit {
 
 
   constructor() {
-    postsSrv.getPost().then(posts => this.posts = posts);
+
   }
 
   ngOnInit(): void {
+    getPost().then(posts => this.posts = posts);
   }
 
+  onInactivePost(id: number, i: number) {
+    updatePost({active: false}, id)
+    this.posts.splice(i,1)
+
+  }
 }
