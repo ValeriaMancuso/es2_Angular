@@ -11,7 +11,7 @@ export class NoActiveComponent implements OnInit {
   posts: Post[] = [];
 
   constructor() {
-    postsSrv.getPost().then(posts => this.posts = posts.filter(post => !post.active));
+    postsSrv.getPost().then(posts => this.posts = posts);
 
   }
 

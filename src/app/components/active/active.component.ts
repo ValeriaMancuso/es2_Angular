@@ -12,7 +12,7 @@ export class ActiveComponent implements OnInit {
 
 
   constructor() {
-    postsSrv.getPost().then(posts => this.posts = posts.filter(post => post.active));
+    postsSrv.getPost().then(posts => this.posts = posts);
   }
 
   ngOnInit(): void {
